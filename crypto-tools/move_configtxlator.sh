@@ -1,0 +1,1 @@
+docker cp ./configtxlator shop-peer-0:/peer/configtxlator
