@@ -1,0 +1,19 @@
+OrdererOrgs:
+- Name: OrdererOrg
+  Domain: orderer-org
+  CommonName: orderer-org
+  Specs:
+  - Hostname: orderer0
+    CommonName: "{{.Hostname}}"
+
+PeerOrgs:
+- Name: ShopOrg
+  Domain: shop-org
+  Specs:
+  - Hostname: shop-peer-0
+    CommonName: "{{.Hostname}}"
+- Name: InsuranceOrg
+  Domain: insurance-org
+  Specs:
+  - Hostname: insurance-peer-0
+    CommonName: "{{.Hostname}}"

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  peer-base:
+    environment:
+    - CORE_LOGGING_LEVEL=DEBUG
+    - CORE_PEER_TLS_ENABLED=false
+    - CORE_PEER_ENDORSER_ENABLED=true
+    - CORE_PEER_GOSSIP_USELEADERELECTION=true
+    - CORE_PEER_GOSSIP_ORGLEADER=false
+    - CORE_PEER_PROFILE_ENABLED=true
+    - CORE_PEER_MSPCONFIGPATH=/peer/crypto/msp
+    working_dir: /peer
+    command: peer node start
+    volumes:
+    - /var/run/:/host/var/run/

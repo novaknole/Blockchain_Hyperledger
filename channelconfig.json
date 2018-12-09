@@ -1,0 +1,491 @@
+{
+        "data": {
+                "data": [
+                        {
+                                "payload": {
+                                        "data": {
+                                                "config": {
+                                                        "channel_group": {
+                                                                "groups": {
+                                                                        "Consortiums": {
+                                                                                "groups": {
+                                                                                        "InsuranceConsortium": {
+                                                                                                "groups": {
+                                                                                                        "ShopOrgMSP": {
+                                                                                                                "groups": {},
+                                                                                                                "mod_policy": "Admins",
+                                                                                                                "policies": {
+                                                                                                                        "Admins": {
+                                                                                                                                "mod_policy": "Admins",
+                                                                                                                                "policy": {
+                                                                                                                                        "type": 1,
+                                                                                                                                        "value": {
+                                                                                                                                                "identities": [
+                                                                                                                                                        {
+                                                                                                                                                                "principal": {
+                                                                                                                                                                 "msp_identifier": "ShopOrgMSP",
+                                                                                                                                                                 "role": "ADMIN"
+                                                                                                                                                                },
+                                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                                        }
+                                                                                                                                                ],
+                                                                                                                                                "rule": {
+                                                                                                                                                        "n_out_of": {
+                                                                                                                                                                "n": 1,
+                                                                                                                                                                "rules": [
+                                                                                                                                                                 {
+                                                                                                                                                                 "signed_by": 0
+                                                                                                                                                                 }
+                                                                                                                                                                ]
+                                                                                                                                                        }
+                                                                                                                                                },
+                                                                                                                                                "version": 0
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": "0"
+                                                                                                                        },
+                                                                                                                        "Readers": {
+                                                                                                                                "mod_policy": "Admins",
+                                                                                                                                "policy": {
+                                                                                                                                        "type": 1,
+                                                                                                                                        "value": {
+                                                                                                                                                "identities": [
+                                                                                                                                                        {
+                                                                                                                                                                "principal": {
+                                                                                                                                                                 "msp_identifier": "ShopOrgMSP",
+                                                                                                                                                                 "role": "MEMBER"
+                                                                                                                                                                },
+                                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                                        }
+                                                                                                                                                ],
+                                                                                                                                                "rule": {
+                                                                                                                                                        "n_out_of": {
+                                                                                                                                                                "n": 1,
+                                                                                                                                                                "rules": [
+                                                                                                                                                                 {
+                                                                                                                                                                 "signed_by": 0
+                                                                                                                                                                 }
+                                                                                                                                                                ]
+                                                                                                                                                        }
+                                                                                                                                                },
+                                                                                                                                                "version": 0
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": "0"
+                                                                                                                        },
+                                                                                                                        "Writers": {
+                                                                                                                                "mod_policy": "Admins",
+                                                                                                                                "policy": {
+                                                                                                                                        "type": 1,
+                                                                                                                                        "value": {
+                                                                                                                                                "identities": [
+                                                                                                                                                        {
+                                                                                                                                                                "principal": {
+                                                                                                                                                                 "msp_identifier": "ShopOrgMSP",
+                                                                                                                                                                 "role": "MEMBER"
+                                                                                                                                                                },
+                                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                                        }
+                                                                                                                                                ],
+                                                                                                                                                "rule": {
+                                                                                                                                                        "n_out_of": {
+                                                                                                                                                                "n": 1,
+                                                                                                                                                                "rules": [
+                                                                                                                                                                 {
+                                                                                                                                                                 "signed_by": 0
+                                                                                                                                                                 }
+                                                                                                                                                                ]
+                                                                                                                                                        }
+                                                                                                                                                },
+                                                                                                                                                "version": 0
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": "0"
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "values": {
+                                                                                                                        "MSP": {
+                                                                                                                                "mod_policy": "Admins",
+                                                                                                                                "value": {
+                                                                                                                                        "config": {
+                                                                                                                                                "admins": [
+                                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNBVENDQWFpZ0F3SUJBZ0lSQU1XUXFUZmwxNnVJc3p2N29WbGxNNDh3Q2dZSUtvWkl6ajBFQXdJd1l6RUwKTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFnVENrTmhiR2xtYjNKdWFXRXhGakFVQmdOVkJBY1REVk5oYmlCRwpjbUZ1WTJselkyOHhFVEFQQmdOVkJBb1RDSE5vYjNBdGIzSm5NUlF3RWdZRFZRUURFd3RqWVM1emFHOXdMVzl5Clp6QWVGdzB4T0RFeU1EY3hNakE1TkRSYUZ3MHlPREV5TURReE1qQTVORFJhTUZNeEN6QUpCZ05WQkFZVEFsVlQKTVJNd0VRWURWUVFJRXdwRFlXeHBabTl5Ym1saE1SWXdGQVlEVlFRSEV3MVRZVzRnUm5KaGJtTnBjMk52TVJjdwpGUVlEVlFRRERBNUJaRzFwYmtCemFHOXdMVzl5WnpCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OUF3RUhBMElBCkJIVENBMGdyeGZ5eFlzTVhzZ0p3VEFxTUQvTTJSSGRtTkpmZEo4MGJqcXBkS0p6MnZxZXlTMkNhSmU1VUtoa1UKdWpZVHc4cGpCbC9GY2x2UG8wUGFidmlqVFRCTE1BNEdBMVVkRHdFQi93UUVBd0lIZ0RBTUJnTlZIUk1CQWY4RQpBakFBTUNzR0ExVWRJd1FrTUNLQUlHbFZvbnVFd0lSU25LRG5nUkNKNFlKUjRLMXcwWW1xZkJyNjFsUG5DWU11Ck1Bb0dDQ3FHU000OUJBTUNBMGNBTUVRQ0lGbVp6Mm9nTUZvQlhBakYyRGcrMHhEaUpnQ0ZsR251eFRlQVZEd3EKU2VsS0FpQjd4V3Y2YkQ1MGFjWkRqRm14emMrKzdhamxrTzZxUDhlMHcvUi9jLzd0eGc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                                                                                                                                                ],
+                                                                                                                                                "crypto_config": {
+                                                                                                                                                        "identity_identifier_hash_function": "SHA256",
+                                                                                                                                                        "signature_hash_family": "SHA2"
+                                                                                                                                                },
+                                                                                                                                                "fabric_node_ous": null,
+                                                                                                                                                "intermediate_certs": [],
+                                                                                                                                                "name": "ShopOrgMSP",
+                                                                                                                                                "organizational_unit_identifiers": [],
+                                                                                                                                                "revocation_list": [],
+                                                                                                                                                "root_certs": [
+                                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNKRENDQWNxZ0F3SUJBZ0lSQU9Zc0xRK2FXTDdvbG9uZ21HSHBjSWN3Q2dZSUtvWkl6ajBFQXdJd1l6RUwKTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFnVENrTmhiR2xtYjNKdWFXRXhGakFVQmdOVkJBY1REVk5oYmlCRwpjbUZ1WTJselkyOHhFVEFQQmdOVkJBb1RDSE5vYjNBdGIzSm5NUlF3RWdZRFZRUURFd3RqWVM1emFHOXdMVzl5Clp6QWVGdzB4T0RFeU1EY3hNakE1TkRSYUZ3MHlPREV5TURReE1qQTVORFJhTUdNeEN6QUpCZ05WQkFZVEFsVlQKTVJNd0VRWURWUVFJRXdwRFlXeHBabTl5Ym1saE1SWXdGQVlEVlFRSEV3MVRZVzRnUm5KaGJtTnBjMk52TVJFdwpEd1lEVlFRS0V3aHphRzl3TFc5eVp6RVVNQklHQTFVRUF4TUxZMkV1YzJodmNDMXZjbWN3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFTT2xaaEd2aWJxaEUxOG9wYVBIYkltZU1wc3dGdHdvVlJ2R1UvRXpObTQKaDdmOG9DY1FxYnpkTUxkVGRkNzhGNkVJSEp0K09MN0pFclVSNHhidDVQTFRvMTh3WFRBT0JnTlZIUThCQWY4RQpCQU1DQWFZd0R3WURWUjBsQkFnd0JnWUVWUjBsQURBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUNrR0ExVWREZ1FpCkJDQnBWYUo3aE1DRVVweWc1NEVRaWVHQ1VlQ3RjTkdKcW53YSt0WlQ1d21ETGpBS0JnZ3Foa2pPUFFRREFnTkkKQURCRkFpRUFxYTU0dUREcXV6T2lRRklza3h0TUh1VGRHNkJZbWdabkM2NmhRams0aVdzQ0lHWVZaNjlwUmtzNgpWSGh4WDRCQ3krZEdRRUxDR2poSzROc2lSUHVtYTI1MAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                                                                                                                                                ],
+                                                                                                                                                "signing_identity": null,
+                                                                                                                                                "tls_intermediate_certs": [],
+                                                                                                                                                "tls_root_certs":[
+                                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNLVENDQWRDZ0F3SUJBZ0lSQUt3cWhic3lWb3ZxVWRqUnZNOC9xUDh3Q2dZSUtvWkl6ajBFQXdJd1pqRUwKTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFnVENrTmhiR2xtYjNKdWFXRXhGakFVQmdOVkJBY1REVk5oYmlCRwpjbUZ1WTJselkyOHhFVEFQQmdOVkJBb1RDSE5vYjNBdGIzSm5NUmN3RlFZRFZRUURFdzUwYkhOallTNXphRzl3CkxXOXlaekFlRncweE9ERXlNRGN4TWpBNU5EUmFGdzB5T0RFeU1EUXhNakE1TkRSYU1HWXhDekFKQmdOVkJBWVQKQWxWVE1STXdFUVlEVlFRSUV3cERZV3hwWm05eWJtbGhNUll3RkFZRFZRUUhFdzFUWVc0Z1JuSmhibU5wYzJOdgpNUkV3RHdZRFZRUUtFd2h6YUc5d0xXOXlaekVYTUJVR0ExVUVBeE1PZEd4elkyRXVjMmh2Y0MxdmNtY3dXVEFUCkJnY3Foa2pPUFFJQkJnZ3Foa2pPUFFNQkJ3TkNBQVRvTVNIbW9PTE5GY3l0RGtwSHRTYWxDWXJyWVFlUDhEaDIKWHZURFZGT1h0T0t3UHArb2xQL2xNSHJIQW5UN044eUpjSGdPbnZEVnJudFY3SHJLSmZNUm8xOHdYVEFPQmdOVgpIUThCQWY4RUJBTUNBYVl3RHdZRFZSMGxCQWd3QmdZRVZSMGxBREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQ2tHCkExVWREZ1FpQkNDL2dUMHo1L1EwamNZclJrajFtQWVKdGVTUjQ5R1ZlR0xHWlFKUXJ5R2N5ekFLQmdncWhrak8KUFFRREFnTkhBREJFQWlBZHRKMjdwY3d0b291UzVOaFNNRUllZDczUEMvdVlkNXVxTGNDUEpYdVUvUUlnYjdvRwptMENtOWlCc3Q2Nm1FVHNQZEx6VFFXZHpQNkljTGRDTStTdkZYMTg9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+                                                                                                                                                ]
+                                                                                                                                        },
+                                                                                                                                        "type": 0
+                                                                                                                                },
+                                                                                                                                "version": "0"
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        }
+                                                                                                },
+                                                                                                "mod_policy": "/Channel/Orderer/Admins",
+                                                                                                "policies": {},
+                                                                                                "values": {
+                                                                                                        "ChannelCreationPolicy": {
+                                                                                                                "mod_policy": "/Channel/Orderer/Admins",
+                                                                                                                "value": {
+                                                                                                                        "type": 3,
+                                                                                                                        "value": {
+                                                                                                                                "rule": "ANY",
+                                                                                                                                "sub_policy": "Admins"
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        }
+                                                                                },
+                                                                                "mod_policy": "/Channel/Orderer/Admins",
+                                                                                "policies": {
+                                                                                        "Admins": {
+                                                                                                "mod_policy": "/Channel/Orderer/Admins",
+                                                                                                "policy": {
+                                                                                                        "type": 1,
+                                                                                                        "value": {
+                                                                                                                "identities": [],
+                                                                                                                "rule": {
+                                                                                                                        "n_out_of": {
+                                                                                                                                "n": 0,
+                                                                                                                                "rules": []
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": 0
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        }
+                                                                                },
+                                                                                "values": {},
+                                                                                "version": "0"
+                                                                        },
+                                                                        "Orderer": {
+                                                                                "groups": {
+                                                                                        "OrdererOrg": {
+                                                                                                "groups": {},
+                                                                                                "mod_policy": "Admins",
+                                                                                                "policies": {
+                                                                                                        "Admins": {
+                                                                                                                "mod_policy": "Admins",
+                                                                                                                "policy": {
+                                                                                                                        "type": 1,
+                                                                                                                        "value": {
+                                                                                                                                "identities": [
+                                                                                                                                        {
+                                                                                                                                                "principal": {
+                                                                                                                                                        "msp_identifier": "OrdererMSP",
+                                                                                                                                                        "role": "ADMIN"
+                                                                                                                                                },
+                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                        }
+                                                                                                                                ],
+                                                                                                                                "rule": {
+                                                                                                                                        "n_out_of": {
+                                                                                                                                                "n": 1,
+                                                                                                                                                "rules": [
+                                                                                                                                                        {
+                                                                                                                                                                "signed_by": 0
+                                                                                                                                                        }
+                                                                                                                                                ]
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": 0
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        },
+                                                                                                        "Readers": {
+                                                                                                                "mod_policy": "Admins",
+                                                                                                                "policy": {
+                                                                                                                        "type": 1,
+                                                                                                                        "value": {
+                                                                                                                                "identities": [
+                                                                                                                                        {
+                                                                                                                                                "principal": {
+                                                                                                                                                        "msp_identifier": "OrdererMSP",
+                                                                                                                                                        "role": "MEMBER"
+                                                                                                                                                },
+                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                        }
+                                                                                                                                ],
+                                                                                                                                "rule": {
+                                                                                                                                        "n_out_of": {
+                                                                                                                                                "n": 1,
+                                                                                                                                                "rules": [
+                                                                                                                                                        {
+                                                                                                                                                                "signed_by": 0
+                                                                                                                                                        }
+                                                                                                                                                ]
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": 0
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        },
+                                                                                                        "Writers": {
+                                                                                                                "mod_policy": "Admins",
+                                                                                                                "policy": {
+                                                                                                                        "type": 1,
+                                                                                                                        "value": {
+                                                                                                                                "identities": [
+                                                                                                                                        {
+                                                                                                                                                "principal": {
+                                                                                                                                                        "msp_identifier": "OrdererMSP",
+                                                                                                                                                        "role": "MEMBER"
+                                                                                                                                                },
+                                                                                                                                                "principal_classification": "ROLE"
+                                                                                                                                        }
+                                                                                                                                ],
+                                                                                                                                "rule": {
+                                                                                                                                        "n_out_of": {
+                                                                                                                                                "n": 1,
+                                                                                                                                                "rules": [
+                                                                                                                                                        {
+                                                                                                                                                                "signed_by": 0
+                                                                                                                                                        }
+                                                                                                                                                ]
+                                                                                                                                        }
+                                                                                                                                },
+                                                                                                                                "version": 0
+                                                                                                                        }
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        }
+                                                                                                },
+                                                                                                "values": {
+                                                                                                        "MSP": {
+                                                                                                                "mod_policy": "Admins",
+                                                                                                                "value": {
+                                                                                                                        "config": {
+                                                                                                                                "admins": [
+                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNDekNDQWJHZ0F3SUJBZ0lSQU5uamhiM2FmN0RURERGcTBCRklmQ2t3Q2dZSUtvWkl6ajBFQXdJd2FURUwKTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFnVENrTmhiR2xtYjNKdWFXRXhGakFVQmdOVkJBY1REVk5oYmlCRwpjbUZ1WTJselkyOHhGREFTQmdOVkJBb1RDMjl5WkdWeVpYSXRiM0puTVJjd0ZRWURWUVFERXc1allTNXZjbVJsCmNtVnlMVzl5WnpBZUZ3MHhPREV5TURjeE1qQTVORFJhRncweU9ERXlNRFF4TWpBNU5EUmFNRll4Q3pBSkJnTlYKQkFZVEFsVlRNUk13RVFZRFZRUUlFd3BEWVd4cFptOXlibWxoTVJZd0ZBWURWUVFIRXcxVFlXNGdSbkpoYm1OcApjMk52TVJvd0dBWURWUVFEREJGQlpHMXBia0J2Y21SbGNtVnlMVzl5WnpCWk1CTUdCeXFHU000OUFnRUdDQ3FHClNNNDlBd0VIQTBJQUJNWlAyM2NQdlR6YzhzRmZqYzBiT3UyOExaWUo1Sk5CQjBjQ01rZm1QVTY5Sm9yTTA2N04KSWdXRUk5bEl6c1NhL1VGVkJiTXJRQy82RGVnYXdHMzg4ZUNqVFRCTE1BNEdBMVVkRHdFQi93UUVBd0lIZ0RBTQpCZ05WSFJNQkFmOEVBakFBTUNzR0ExVWRJd1FrTUNLQUlBNzlKVWlRci9ZY3VHMVlsTVhVQTBtcDFsb0dNek13Ck9OclZuckFTUTFwN01Bb0dDQ3FHU000OUJBTUNBMGdBTUVVQ0lRRFVuSitEd0ZneXRhcEpla3ZOSzB5Rk8rSlQKbklSaHVEcjNPSmNkTzBncVF3SWdTbFVzUXdrWXkvS2xVUTdrN09vMlc2V2E2SCtKdUpvdzdiRDVLZDZPemRZPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                                                                                                                                ],
+                                                                                                                                "crypto_config": {
+                                                                                                                                        "identity_identifier_hash_function": "SHA256",
+                                                                                                                                        "signature_hash_family": "SHA2"
+                                                                                                                                },
+                                                                                                                                "fabric_node_ous": null,
+                                                                                                                                "intermediate_certs": [],
+                                                                                                                                "name": "OrdererMSP",
+                                                                                                                                "organizational_unit_identifiers": [],
+                                                                                                                                "revocation_list": [],
+                                                                                                                                "root_certs": [
+                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNMekNDQWRXZ0F3SUJBZ0lRRm1wUVcxMWNCckNKc2tiK1RMWHYvakFLQmdncWhrak9QUVFEQWpCcE1Rc3cKQ1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0JNS1EyRnNhV1p2Y201cFlURVdNQlFHQTFVRUJ4TU5VMkZ1SUVaeQpZVzVqYVhOamJ6RVVNQklHQTFVRUNoTUxiM0prWlhKbGNpMXZjbWN4RnpBVkJnTlZCQU1URG1OaExtOXlaR1Z5ClpYSXRiM0puTUI0WERURTRNVEl3TnpFeU1EazBORm9YRFRJNE1USXdOREV5TURrME5Gb3dhVEVMTUFrR0ExVUUKQmhNQ1ZWTXhFekFSQmdOVkJBZ1RDa05oYkdsbWIzSnVhV0V4RmpBVUJnTlZCQWNURFZOaGJpQkdjbUZ1WTJsegpZMjh4RkRBU0JnTlZCQW9UQzI5eVpHVnlaWEl0YjNKbk1SY3dGUVlEVlFRREV3NWpZUzV2Y21SbGNtVnlMVzl5Clp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJObHRVWkd1WWNvWFZwb3I3VE1pV3BRdGFJTkUKQ2I1U3lkRkg4UXgyR0ZraENYekdhd2NSQldqUjBiamkvUVAybHVSRmVoT0FDR0xxQWZET3JGZ2pHVXlqWHpCZApNQTRHQTFVZER3RUIvd1FFQXdJQnBqQVBCZ05WSFNVRUNEQUdCZ1JWSFNVQU1BOEdBMVVkRXdFQi93UUZNQU1CCkFmOHdLUVlEVlIwT0JDSUVJQTc5SlVpUXIvWWN1RzFZbE1YVUEwbXAxbG9HTXpNd09OclZuckFTUTFwN01Bb0cKQ0NxR1NNNDlCQU1DQTBnQU1FVUNJUUN4dSs4RkNIUXBLc01JQUlGS1N0UGdOeUZHMGFDYTdjb0x1QkgvVkljOApwUUlnRS9UR0VVZ1dhN0RBQlZnNVdFc3ZMM2wyWWw0TCtYWGR4ZjQxT3BDZmUrMD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+                                                                                                                                ],
+                                                                                                                                "signing_identity": null,
+                                                                                                                                "tls_intermediate_certs": [],
+                                                                                                                                "tls_root_certs": [
+                                                                                                                                        "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNOVENDQWR1Z0F3SUJBZ0lRRnBvYWZXWWpaZDIva21maHk4U0xLVEFLQmdncWhrak9QUVFEQWpCc01Rc3cKQ1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0JNS1EyRnNhV1p2Y201cFlURVdNQlFHQTFVRUJ4TU5VMkZ1SUVaeQpZVzVqYVhOamJ6RVVNQklHQTFVRUNoTUxiM0prWlhKbGNpMXZjbWN4R2pBWUJnTlZCQU1URVhSc2MyTmhMbTl5ClpHVnlaWEl0YjNKbk1CNFhEVEU0TVRJd056RXlNRGswTkZvWERUSTRNVEl3TkRFeU1EazBORm93YkRFTE1Ba0cKQTFVRUJoTUNWVk14RXpBUkJnTlZCQWdUQ2tOaGJHbG1iM0p1YVdFeEZqQVVCZ05WQkFjVERWTmhiaUJHY21GdQpZMmx6WTI4eEZEQVNCZ05WQkFvVEMyOXlaR1Z5WlhJdGIzSm5NUm93R0FZRFZRUURFeEYwYkhOallTNXZjbVJsCmNtVnlMVzl5WnpCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OUF3RUhBMElBQkdmTXVJb0o3OU1SRk10NlRKczkKSGJURDdFSnNwYXoxaWxublBXRk5jYXZueTJ5TUFwSnlmMlN2ZUxxdHY0VisxRGhlYzNmeSs1ZzROcVdHc1FMNApJSFdqWHpCZE1BNEdBMVVkRHdFQi93UUVBd0lCcGpBUEJnTlZIU1VFQ0RBR0JnUlZIU1VBTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0tRWURWUjBPQkNJRUlMRmErOFhkSythRTVJUDQ4T1hnYTFjZHpreDN3SFAwb0k4NVBvN2IKYTVmTU1Bb0dDQ3FHU000OUJBTUNBMGdBTUVVQ0lRRFVGVTBuanMwU3MyekNsaEloQWsrR2dMd3UycFZBSHJ0NwplT0N2SlE5Nzh3SWdad0RnSjFCc3Axd0RwaE5qSENYcjhjejNyYlZFa29NYVZXSEE4UEF3ZFhZPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                                                                                                                                ]
+                                                                                                                        },
+                                                                                                                        "type": 0
+                                                                                                                },
+                                                                                                                "version": "0"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        }
+                                                                                },
+                                                                                "mod_policy": "Admins",
+                                                                                "policies": {
+                                                                                        "Admins": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "policy": {
+                                                                                                        "type": 3,
+                                                                                                        "value": {
+                                                                                                                "rule": "MAJORITY",
+                                                                                                                "sub_policy": "Admins"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "BlockValidation": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "policy": {
+                                                                                                        "type": 3,
+                                                                                                        "value": {
+                                                                                                                "rule": "ANY",
+                                                                                                                "sub_policy": "Writers"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "Readers": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "policy": {
+                                                                                                        "type": 3,
+                                                                                                        "value": {
+                                                                                                                "rule": "ANY",
+                                                                                                                "sub_policy": "Readers"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "Writers": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "policy": {
+                                                                                                        "type": 3,
+                                                                                                        "value": {
+                                                                                                                "rule": "ANY",
+                                                                                                                "sub_policy": "Writers"
+                                                                                                        }
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        }
+                                                                                },
+                                                                                "values": {
+                                                                                        "BatchSize": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "value": {
+                                                                                                        "absolute_max_bytes": 103809024,
+                                                                                                        "max_message_count": 10,
+                                                                                                        "preferred_max_bytes": 524288
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "BatchTimeout": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "value": {
+                                                                                                        "timeout": "2s"
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "ChannelRestrictions": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "value": null,
+                                                                                                "version": "0"
+                                                                                        },
+                                                                                        "ConsensusType": {
+                                                                                                "mod_policy": "Admins",
+                                                                                                "value": {
+                                                                                                        "metadata": null,
+                                                                                                        "type": "solo"
+                                                                                                },
+                                                                                                "version": "0"
+                                                                                        }
+                                                                                },
+                                                                                "version": "0"
+                                                                        }
+                                                                },
+                                                                "mod_policy": "Admins",
+                                                                "policies": {
+                                                                        "Admins": {
+                                                                                "mod_policy": "Admins",
+                                                                                "policy": {
+                                                                                        "type": 3,
+                                                                                        "value": {
+                                                                                                "rule": "MAJORITY",
+                                                                                                "sub_policy": "Admins"
+                                                                                        }
+                                                                                },
+                                                                                "version": "0"
+                                                                        },
+                                                                        "Readers": {
+                                                                                "mod_policy": "Admins",
+                                                                                "policy": {
+                                                                                        "type": 3,
+                                                                                        "value": {
+                                                                                                "rule": "ANY",
+                                                                                                "sub_policy": "Readers"
+                                                                                        }
+                                                                                },
+                                                                                "version": "0"
+                                                                        },
+                                                                        "Writers": {
+                                                                                "mod_policy": "Admins",
+                                                                                "policy": {
+                                                                                        "type": 3,
+                                                                                        "value": {
+                                                                                                "rule": "ANY",
+                                                                                                "sub_policy": "Writers"
+                                                                                        }
+                                                                                },
+                                                                                "version": "0"
+                                                                        }
+                                                                },
+                                                                "values": {
+                                                                        "BlockDataHashingStructure": {
+                                                                                "mod_policy": "Admins",
+                                                                                "value": {
+                                                                                        "width": 4294967295
+                                                                                },
+                                                                                "version": "0"
+                                                                        },
+                                                                        "HashingAlgorithm": {
+                                                                                "mod_policy": "Admins",
+                                                                                "value": {
+                                                                                        "name": "SHA256"
+                                                                                },
+                                                                                "version": "0"
+                                                                        },
+                                                                        "OrdererAddresses": {
+                                                                                "mod_policy": "/Channel/Orderer/Admins",
+                                                                                "value": {
+                                                                                        "addresses": [
+                                                                                                "orderer0:7050"
+                                                                                        ]
+                                                                                },
+                                                                                "version": "0"
+                                                                        }
+                                                                },
+                                                                "version": "0"
+                                                        },
+                                                        "sequence": "0"
+                                                },
+                                                "last_update": null
+                                        },
+                                        "header": {
+                                                "channel_header": {
+                                                        "channel_id": "orderer-system-channel",
+                                                        "epoch": "0",
+                                                        "extension": null,
+                                                        "timestamp": "2018-12-07T14:00:50Z",
+                                                        "tls_cert_hash": null,
+                                                        "tx_id": "4042a189899ba096c5daf62b6e6ed80f7ae7858345d3ebf8c554cdf2070a96b4",
+                                                        "type": 1,
+                                                        "version": 1
+                                                },
+                                                "signature_header": {
+                                                        "creator": null,
+                                                        "nonce": "FCy1DVt8NJEswEdr8P0nLuNDbZLJDffG"
+                                                }
+                                        }
+                                },
+                                "signature": null
+                        }
+                ]
+        },
+        "header": {
+                "data_hash": "iB82/NlIo58ZITYCVY7Co2HH/oY3koW48a0kYtlo9fI=",
+                "number": "0",
+                "previous_hash": null
+        },
+        "metadata": {
+                "metadata": [
+                        "",
+                        "",
+                        "",
+                        ""
+                ]
+        }
+}

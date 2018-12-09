@@ -1,0 +1,103 @@
+---
+
+Organizations:
+- &OrdererOrg
+  Name: OrdererOrg
+  ID: OrdererMSP
+  MSPDir: ../crypto-config/ordererOrganizations/orderer-org/msp
+- &ShopOrg
+  Name: ShopOrgMSP
+  ID: ShopOrgMSP
+  MSPDir: ../crypto-config/peerOrganizations/shop-org/msp
+  AnchorPeers:
+  - Host: shop-peer-0
+    Port: 7051
+- &InsuranceOrg
+  Name: InsuranceOrgMSP
+  ID: InsuranceOrgMSP
+  MSPDir: ../crypto-config/peerOrganizations/insurance-org/msp
+  AnchorPeers:
+  - Host: insurance-peer-0
+    Port: 7051
+
+    
+
+Orderer: &OrdererDefaults
+  OrdererType: solo
+  Addresses:
+  - orderer0:7050
+  BatchTimeout: 2s
+  BatchSize:
+    MaxMessageCount: 10
+    AbsoluteMaxBytes: 99 MB
+    PreferredMaxBytes: 512 KB
+  Organizations:
+
+
+
+Capabilities:
+    Channel: &ChannelCapabilities
+        V1_1: true
+        V1_3: true
+    Orderer: &OrdererCapabilities
+        V1_1: true
+    Application: &ApplicationCapabilities
+        V1_1: true
+        V1_3: true
+
+      
+
+Application: &ApplicationDefaults
+  ACLs: &ACLsDefault
+    peer/Propose: /Channel/Application/MyPolicy1
+
+  Policies: &ApplicationDefaultPolicies
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        MyPolicy1:
+            Type: Signature
+            Rule: "OR('ShopOrgMSP.member')"
+
+  Organizations:
+
+
+  Capabilities:
+        <<: *ApplicationCapabilities
+  
+
+
+
+
+
+Profiles:
+  OrdererGenesis:
+    Orderer:
+      <<: *OrdererDefaults
+      Organizations:
+      - *OrdererOrg
+      Capabilities:
+          <<: *OrdererCapabilities
+    Consortiums:
+      InsuranceConsortium:
+        Organizations:
+        - *ShopOrg
+        - *InsuranceOrg
+
+
+  ShopInsuranceChannel:
+    Consortium: InsuranceConsortium
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+      - *ShopOrg
+      - *InsuranceOrg
+
+
+

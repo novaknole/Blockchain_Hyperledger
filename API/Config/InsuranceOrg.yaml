@@ -1,0 +1,9 @@
+name: "ShopOrg Client"
+version: "1.0"
+
+client:
+  organization: InsuranceOrg
+  credentialStore:
+    path: "./hfc-key-store"
+    cryptoStore:
+      path: "./hfc-key-store"

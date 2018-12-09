@@ -1,0 +1,90 @@
+Admin - org's admin certificate
+member - any certificate organization's ca issued.
+peer - org's peer's certificate
+client - orgs's client certificate
+
+
+
+https://stackoverflow.com/questions/51670810/implementing-acl-in-hyperledger-fabric-v1-2
+
+
+Create Channel Transaction is an administrative task(couldn't be controlled by ACL)
+
+1) orderer0  -   Processing channel create tx for channel globalchannel on system channel testchainid
+2) orderer goes to its system-channel's genesis block, takes all organization that  are in this channel.tx, and
+checks if organization's certificate and it's admin certificate are connected (derived) and valid.
+
+3) orderer0 starts evaluating policy  /Channel/Application/ChannelCreationPolicy(this implicit meta policy by default has Any Admins) 
+which takes us to /Channel/Application/ShopOrgMSP/admins. Then here it checks if signature which came is really the admin of ShopOrgMSP.
+
+4) if signature is type of admin from (3), then it checks channel/writers(any writers) implicit meta policy. which takes us to
+channel/orderer/writers(any writers) which also takes us to channel/orderer/ordererorg/writers which has the signature type with
+a rule : ordererorg.member. then checks signatures if all good, continues.
+
+5) then creates the channel which has all the default channel configurations and policies except the ones we added in
+Applications section
+
+
+
+
+
+Join channel.(can't be controlled by ACL and is controlled BY CSCC);
+
+when joining a channel, peer first  needs to get genesis block from orderer.
+
+1) when we do getGenesisBlock, we specify the peer's admin's certificates. here is what happens:
+    First policy that gets executed is /Channel/Readers(any readers) which execute its two children policy(/Channel/Application/Readers and /Channel/Orderer/Readers).
+    if one of them returns true, we are good to go.  When we specifed peer's admin certificate, it first checks /Channel/Orderer/OrdererOrg/Readers and its signature must be from OrdererMSP organization, we had ShopOrg's peers certificate.so this policy returns false.
+    Then we move on to /Channel/APplication/ShopOrg/Readers(member of ShopOrg signature) and signature gets satisfied. So reading genesis block works.
+    Now peer has to put this block into its new channel. IF we don't specify peer's admin certificate, after reading the block, it won't be able to put this block(permission denied).
+    so there's a Configuration System Chaincode(CSCC) which handles channel configuration on the peer and in it, there's a strict rule that only peers Admins
+    are allowed to join the channel.
+
+
+ 
+
+INstall Chaincode (can't be controlled by ACL and is controlled By LSCC)
+
+when installing chaincode, it only installs chaincode on a peer, but it's not known to channel and nothing can be done by this operation only.
+only peers admins are allowed to do this operation. The policy that takes care of verifying if it's peer admin or not is via LSCC. (lifecycle system chaincode)
+
+
+
+Querying chaincode
+
+executes peer/Propose ACL which has /Channel/Application/Writers by default. It depends on what we have in /Channel/Application/Writers. by default, it has ANY WRITERS.
+to better understand we could do something like this:
+peer/Propose: /Channel/Application/MyPolicy1
+
+MyPolicy1:
+    Type: Signature
+    Rule: "OR('ShopOrgMSP.admin')"
+
+So now only ShopOrgMSP admin can query the chaincode and no one else at all. even the member of ShopOrgMSP.
+
+
+
+Invoking chaincode
+
+executes peer/Propose ACL first because we give our invoke transaction to the peer first. it checks /Channel/Application/Readers. then if all good,
+peer returns endorsment response. then we have to give this endorsment response to orderer. let's see what orderer does.
+
+1) /Channel/Writers (any writers by default) which gives us /Channel/Orderer/Writers (by default any writers) which gives us /Channel/Orderer/OrdererOrg/Writers(by default any writers).
+in here by default there's  written  signature by OrdererMSP.member, but ShopOrgMSP gave this transaction so signature didn't satisfy. EXpected OrdererMSP but got ShopOrg.
+
+2) checks /Channel/Application/Writers(by default any writers) which gives us /Channel/Application/ShopOrg/Writers which has the following by default(signature by ShopOrgMSP.member)
+so the signature will be valid. then it writes this transaction to its block, updates its ledger and gives this block to peers(peers will check transactions were really satisfied).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

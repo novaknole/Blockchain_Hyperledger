@@ -1,0 +1,86 @@
+name: "fabric_ca"
+version: "1.0"
+
+
+channels:
+  globalchannel:
+    orderers:
+      - orderer0
+    peers:
+      shop-peer-0:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+      insurance-peer-0:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+      
+
+organizations:
+  ShopOrg:
+    mspid: ShopOrgMSP
+    peers:
+      - shop-peer-0
+    certificateAuthorities:
+      - shop_ca
+    adminPrivateKey:
+      path: ../crypto-config/peerOrganizations/shop-org/users/Admin@shop-org/msp/keystore/Admin@shop-org-priv.pem
+    signedCert:
+      path: ../crypto-config/peerOrganizations/shop-org/users/Admin@shop-org/msp/signcerts/Admin@shop-org-cert.pem
+  
+  InsuranceOrg:
+    mspid: InsuranceOrgMSP
+    peers:
+      - insurance-peer-0
+    certificateAuthorities:
+      - insurance_ca
+    adminPrivateKey:
+      path: ../crypto-config/peerOrganizations/insurance-org/users/Admin@insurance-org/msp/keystore/Admin@insurance-org-priv.pem
+    signedCert:
+      path: ../crypto-config/peerOrganizations/insurance-org/users/Admin@insurance-org/msp/signcerts/Admin@insurance-org-cert.pem
+  
+  
+  
+orderers:
+  orderer0:
+    url: grpc://localhost:7050
+    grpcOptions:
+      ssl-target-name-override: orderer0
+      grpc-max-send-message-length: 5000
+
+peers:
+  shop-peer-0:
+    url: grpc://localhost:8051
+    eventUrl: grpc://localhost:8053
+    grpcOptions:
+      ssl-target-name-override: shop-peer-0
+      grpc.keepalive_time_ms: 600000
+  insurance-peer-0:
+    url: grpc://localhost:9051
+    eventUrl: grpc://localhost:9053
+    grpcOptions:
+      ssl-target-name-override: insurance-peer-0
+      grpc.keepalive_time_ms: 600000
+    
+  
+    
+
+certificateAuthorities:
+  shop_ca:
+    url: http://localhost:8054
+    registrar:
+      - enrollId: admin1
+        enrollSecret: admin1
+    caName: shop_ca
+
+  insurance_ca:
+    url: http://localhost:9054
+    registrar:
+      - enrollId: admin2
+        enrollSecret: admin2
+    caName: insurance_ca
+
+
